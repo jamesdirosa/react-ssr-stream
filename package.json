@@ -1,0 +1,25 @@
+{
+  "name": "node-http-server",
+  "version": "1.0.0",
+  "description": "Node.js example server starter project",
+  "scripts": {
+    "build:client": "esbuild src/index.js --bundle --outfile=dist/bundle.js --loader:.js=jsx",
+    "build:server": "esbuild server/index.jsx --bundle --outfile=build/server.js --platform=node",
+    "build": "npm run build:client && npm run build:server",
+    "start": "echo 'bbuilding...' && npm run build && echo 'starting...' && node ./build/server.js"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/material": "^5.10.6",
+    "esbuild": "0.14.13",
+    "express": "4.17.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.20"
+  },
+  "keywords": []
+}
