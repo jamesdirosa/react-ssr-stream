@@ -10,23 +10,6 @@ import Tooltip from "@mui/material/Tooltip";
 import AdbIcon from "@mui/icons-material/Adb";
 
 export const AppWrapper = ({ children }) => {
-  const [anchorElNav, setAnchorElNav] = React.useState();
-  const [anchorElUser, setAnchorElUser] = React.useState();
-
-  const handleOpenNavMenu = (event) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
   return (
     <>
       <AppBar position="static">
@@ -53,11 +36,8 @@ export const AppWrapper = ({ children }) => {
 
             <Box sx={{ flexGrow: 0 }}>
               <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar
-                    alt="Remy Sharp"
-                    src="https://www.gravatar.com/avatar/7908ed06cb1bbe8355b9382fe0bedeb3?s=200"
-                  />
+                <IconButton sx={{ p: 0 }}>
+                  <Avatar src="https://www.gravatar.com/avatar/7908ed06cb1bbe8355b9382fe0bedeb3?s=200" />
                 </IconButton>
               </Tooltip>
             </Box>
