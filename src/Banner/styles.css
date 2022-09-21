@@ -1,0 +1,19 @@
+.banner-wrapper {
+  background-color: #5c64bf;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  padding: 10px 20px;
+}
+.banner-icon {
+  font-size: 36px;
+  margin-top: 4px;
+}
+.banner-title {
+  flex: 1;
+  font-family: "Lobster", cursive;
+  font-size: 38px;
+}
+.profile-avatar {
+  margin-right: 4px;
+}

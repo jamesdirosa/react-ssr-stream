@@ -1,0 +1,16 @@
+.review-title {
+  font-family: "Oswald";
+  font-size: 24px;
+  color: #5c64bf;
+  font-weight: 700;
+}
+
+.review-author {
+  font-size: 18px;
+  color: rgb(98, 98, 98);
+  line-height: 30px;
+}
+
+.review-body {
+  line-height: 30px;
+}

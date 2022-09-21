@@ -1,0 +1,36 @@
+/* defaults */
+body {
+  margin: 0;
+  font-family: "Roboto";
+  font-size: 18px;
+  line-height: 36px;
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 38px;
+}
+
+/* colors */
+.color-primary {
+  color: #65cc9b;
+}
+
+.background-primary {
+  background-color: #5c64bf;
+}
+
+/* layout stuff */
+.page-wrap {
+  max-width: 800px;
+  margin: 30px auto;
+}
+.margin-no-top {
+  margin-top: 0;
+}
+
+.avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}

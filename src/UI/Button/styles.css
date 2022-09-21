@@ -1,0 +1,26 @@
+button {
+  font-family: "Oswald";
+  padding: 6px 16px;
+  background-color: #5c64bf;
+  transition: all 0.25s;
+  color: white;
+  min-width: none;
+  font-weight: 700;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  line-height: 38px;
+  letter-spacing: 0.02857em;
+  text-transform: uppercase;
+  min-width: 64px;
+  outline: 0;
+}
+
+button:hover {
+  background-color: #414edb;
+}
+
+.disabled {
+  opacity: 0.25;
+}
