@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import React, { Suspense } from "react";
-import { getComments } from "../../server/dal/get-comments";
+import { getComments } from "../../server/dal/api";
 import { AppWrapper } from "../AppWrapper";
 import { DataProvider } from "../Contexts/DataContext";
 const SlowComponent = React.lazy(() => import("../SlowComponent"));

@@ -1,13 +1,14 @@
-import React from "react";
+import React, { Suspense } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
-import Tooltip from "@mui/material/Tooltip";
 import AdbIcon from "@mui/icons-material/Adb";
+import { CircularProgress, Skeleton } from "@mui/material";
+import { DataProvider } from "../Contexts/DataContext";
+import { loadProfile } from "../../server/dal/api";
+const Profile = React.lazy(() => import("./Profile"));
 
 export const AppWrapper = ({ children }) => {
   return (
@@ -35,11 +36,15 @@ export const AppWrapper = ({ children }) => {
             </Typography>
 
             <Box sx={{ flexGrow: 0 }}>
-              <Tooltip title="Open settings">
-                <IconButton sx={{ p: 0 }}>
-                  <Avatar src="https://www.gravatar.com/avatar/7908ed06cb1bbe8355b9382fe0bedeb3?s=200" />
-                </IconButton>
-              </Tooltip>
+              <DataProvider data={loadProfile()}>
+                <Suspense
+                  fallback={
+                    <Skeleton variant="circular" width={40} height={40} />
+                  }
+                >
+                  <Profile />
+                </Suspense>
+              </DataProvider>
             </Box>
           </Toolbar>
         </Container>
