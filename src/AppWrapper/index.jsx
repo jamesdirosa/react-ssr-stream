@@ -4,10 +4,10 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import AdbIcon from "@mui/icons-material/Adb";
 import { CircularProgress, Skeleton } from "@mui/material";
 import { DataProvider } from "../Contexts/DataContext";
 import { loadProfile } from "../../server/dal/api";
+import { Coffee } from "@mui/icons-material";
 const Profile = React.lazy(() => import("./Profile"));
 
 export const AppWrapper = ({ children }) => {
@@ -16,7 +16,7 @@ export const AppWrapper = ({ children }) => {
       <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
+            <Coffee sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
             <Typography
               variant="h6"
               noWrap
@@ -32,7 +32,7 @@ export const AppWrapper = ({ children }) => {
                 textDecoration: "none",
               }}
             >
-              ABC Corp
+              Bulldog Coffee
             </Typography>
 
             <Box sx={{ flexGrow: 0 }}>
@@ -49,7 +49,7 @@ export const AppWrapper = ({ children }) => {
           </Toolbar>
         </Container>
       </AppBar>
-      <div style={{ padding: 30 }}>{children}</div>
+      <div style={{ maxWidth: 800, margin: "30px auto" }}>{children}</div>
     </>
   );
 };

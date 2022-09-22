@@ -14,6 +14,7 @@ app.get("/", (req, res) => {
     },
     final() {
       res.end("</body></html>");
+      // res.end('</body><script>console.log("SSR has completed!");</script></html>');
     },
   });
   const { pipe } = renderToPipeableStream(

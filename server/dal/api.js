@@ -1,27 +1,23 @@
 import suspensify from "../../src/helpers/suspensify";
+import { content, profile, reviews } from "./mock-data";
 
-export function getComments() {
+export function loadReviews() {
   const promise = new Promise((res, rej) =>
-    setTimeout(() => res(comments), 10000)
+    setTimeout(() => res(reviews), 12000)
   );
   return suspensify(promise);
 }
 
 export function loadProfile() {
   const promise = new Promise((res, rej) =>
-    setTimeout(() => res(profile), 5000)
+    setTimeout(() => res(profile), 3000)
   );
   return suspensify(promise);
 }
 
-const comments = [
-  {
-    userName: "Jerry Seinfeld",
-    comment: "These pretzels are making me thirsty",
-  },
-];
-
-const profile = {
-  url: "https://www.gravatar.com/avatar/7908ed06cb1bbe8355b9382fe0bedeb3?s=200",
-  name: "James DiRosa",
-};
+export function loadContent() {
+  const promise = new Promise((res, rej) =>
+    setTimeout(() => res(content), 6000)
+  );
+  return suspensify(promise);
+}
