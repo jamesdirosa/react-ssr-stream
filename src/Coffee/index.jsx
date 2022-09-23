@@ -1,12 +1,17 @@
 import { LocalMall } from "@mui/icons-material";
 import { Button, Grid, Typography } from "@mui/material";
 import React from "react";
+import { useCart } from "../Contexts/CartContext";
 import { useData } from "../Contexts/DataContext";
 const Coffee = () => {
   const [itemCount, setItemCount] = React.useState(0);
   const [loading, setLoading] = React.useState(false);
-  const handleClick = () => {
-    alert("click");
+
+  const { addItem } = useCart();
+  const handleClick = async () => {
+    setLoading(true);
+    await addItem();
+    setLoading(false);
   };
   const data = useData();
   return (
@@ -32,8 +37,8 @@ const Coffee = () => {
         <div style={{ marginTop: 20 }}>
           <Button
             id={React.useId()}
-            // disabled={loading}
-            onClick={() => alert("clickyclack")}
+            disabled={loading}
+            onClick={handleClick}
             startIcon={<LocalMall />}
             variant="contained"
             color="primary"

@@ -11,6 +11,7 @@ Just a demo of some react 18 stuff.
 
 ### useTransition
 
+Essentially marks something as lower priority to allow higher priority state changes to render first. This should be used sparingly because it increases the number of renders React will make
 [docs](https://reactjs.org/docs/hooks-reference.html#usetransition)
 
 ```jsx

@@ -16,7 +16,6 @@ app.get("/", (req, res) => {
       res.end(
         '<script src="http://localhost:3000/bundle.js"></script></body></html>'
       );
-      // res.end('</body><script>console.log("SSR has completed!");</script></html>');
     },
   });
   const { pipe } = renderToPipeableStream(

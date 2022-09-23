@@ -4,7 +4,7 @@ import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
-import { CircularProgress, Skeleton } from "@mui/material";
+import { Skeleton } from "@mui/material";
 import { DataProvider } from "../Contexts/DataContext";
 import { loadProfile } from "../../server/dal/api";
 import { Coffee } from "@mui/icons-material";

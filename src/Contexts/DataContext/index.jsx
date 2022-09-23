@@ -5,6 +5,7 @@ export let data;
 const DataContext = createContext(null);
 
 export function DataProvider({ children, data }) {
+  // Update to keep data in state. data, fetch, refetch
   return <DataContext.Provider value={data}>{children}</DataContext.Provider>;
 }
 
