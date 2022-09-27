@@ -21,7 +21,7 @@ export const profile = {
 };
 
 export const content = {
-  title: "LurchFat Blend",
+  title: "Premium Blend",
   description:
     "Our most popular coffee. Notes of beans and whatever else make coffee taste good. Grown in the shire, and harvest by wizards at the peak of bean freshness. Price is for 16oz",
   price: 34.21,

@@ -3,31 +3,48 @@ import { renderToPipeableStream } from "react-dom/server";
 import React from "react";
 import { App } from "../src/App";
 import path from "path";
-import { Writable } from "node:stream";
+
+// Demo VARS
+const streamResponse = true;
 
 const app = express();
 const port = 3000;
+
 app.get("/", (req, res) => {
-  const stream = new Writable({
-    write(chunk, _encoding, cb) {
-      res.write(chunk, cb);
-    },
-    final() {
-      res.end(
-        '<script src="http://localhost:3000/bundle.js"></script></body></html>'
-      );
-    },
-  });
+  let didError = false;
+
+  // https://reactjs.org/docs/react-dom-server.html#rendertopipeablestream
   const { pipe } = renderToPipeableStream(
-    <div id="root">
-      <App />
-    </div>,
+    <>
+      <style>{`body{margin:0}`}</style>
+      <div id="root">
+        <App />
+      </div>
+    </>,
     {
+      // The content above all Suspense boundaries is ready.
       onShellReady() {
-        res.write(
-          '<html><head><style>body{margin:0;}</style><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/><body>'
-        );
-        pipe(stream);
+        if (!streamResponse) {
+          return;
+        }
+
+        // If something errored before we started streaming, we set the error code appropriately.
+        res.statusCode = didError ? 500 : 200;
+
+        pipe(res);
+      },
+
+      // Load the javascript after static html. Will wire up events on load.
+      bootstrapScripts: ["/bundle.js", "/bundle.css"],
+      onError(err) {
+        didError = true;
+        console.error(err);
+      },
+      onAllReady() {
+        if (streamResponse) {
+          return;
+        }
+        pipe(res);
       },
     }
   );

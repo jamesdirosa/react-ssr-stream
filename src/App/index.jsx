@@ -5,8 +5,10 @@ import { DataProvider } from "../Contexts/DataContext";
 import { CoffeeLoader } from "../Coffee/CoffeeLoader";
 import { ReviewListLoader } from "../Coffee/ReviewList/ReviewListLoader";
 import { CartProvider } from "../Contexts/CartContext";
+
 const ReviewList = React.lazy(() => import("../Coffee/ReviewList"));
 const Coffee = React.lazy(() => import("../Coffee"));
+
 export const App = () => (
   <CartProvider>
     <AppWrapper>
