@@ -1,4 +1,4 @@
-import { Skeleton } from "@mui/material";
+import { Skeleton } from "../../UI/Skeleton";
 import React from "react";
 
 export const ReviewListLoader = () => {
@@ -22,49 +22,24 @@ const ReviewLoader = () => {
     >
       <div style={{ paddingTop: 8 }}>
         <span style={{ marginRight: 6 }}>
-          <Skeleton
-            style={{ display: "inline-block" }}
-            variant="circular"
-            width={18}
-            height={18}
-          />
+          <Skeleton circle width={18} height={18} />
         </span>
         <span style={{ marginRight: 6 }}>
-          <Skeleton
-            style={{ display: "inline-block" }}
-            variant="circular"
-            width={18}
-            height={18}
-          />
+          <Skeleton circle width={18} height={18} />
         </span>
         <span style={{ marginRight: 6 }}>
-          <Skeleton
-            style={{ display: "inline-block" }}
-            variant="circular"
-            width={18}
-            height={18}
-          />
+          <Skeleton circle width={18} height={18} />
         </span>
         <span style={{ marginRight: 6 }}>
-          <Skeleton
-            style={{ display: "inline-block" }}
-            variant="circular"
-            width={18}
-            height={18}
-          />
+          <Skeleton circle width={18} height={18} />
         </span>
         <span style={{ marginRight: 6 }}>
-          <Skeleton
-            style={{ display: "inline-block" }}
-            variant="circular"
-            width={18}
-            height={18}
-          />
+          <Skeleton circle width={18} height={18} />
         </span>
       </div>
-      <Skeleton variant="text" sx={{ fontSize: "3rem" }} />
-      <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
-      <Skeleton variant="text" sx={{ fontSize: "1rem" }} />
+      <Skeleton text fontSize={18} />
+      <Skeleton text fontSize={18} />
+      <Skeleton text fontSize={18} />
     </div>
   );
 };

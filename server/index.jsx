@@ -3,7 +3,9 @@ import { renderToPipeableStream } from "react-dom/server";
 import React from "react";
 import { App } from "../src/App";
 import path from "path";
-
+// TODO: I think the issue is mui injecting stuff or possibly the lack of webpack
+// TODO: Ditch mui.. I don't really need it
+// https://codesandbox.io/s/kind-sammet-j56ro?file=/src/data.js
 // Demo VARS
 const streamResponse = true;
 
@@ -14,40 +16,32 @@ app.get("/", (req, res) => {
   let didError = false;
 
   // https://reactjs.org/docs/react-dom-server.html#rendertopipeablestream
-  const { pipe } = renderToPipeableStream(
-    <>
-      <style>{`body{margin:0}`}</style>
-      <div id="root">
-        <App />
-      </div>
-    </>,
-    {
-      // The content above all Suspense boundaries is ready.
-      onShellReady() {
-        if (!streamResponse) {
-          return;
-        }
+  const { pipe } = renderToPipeableStream(<App />, {
+    // The content above all Suspense boundaries is ready.
+    onShellReady() {
+      if (!streamResponse) {
+        return;
+      }
 
-        // If something errored before we started streaming, we set the error code appropriately.
-        res.statusCode = didError ? 500 : 200;
+      // If something errored before we started streaming, we set the error code appropriately.
+      res.statusCode = didError ? 500 : 200;
 
-        pipe(res);
-      },
+      pipe(res);
+    },
 
-      // Load the javascript after static html. Will wire up events on load.
-      bootstrapScripts: ["/bundle.js", "/bundle.css"],
-      onError(err) {
-        didError = true;
-        console.error(err);
-      },
-      onAllReady() {
-        if (streamResponse) {
-          return;
-        }
-        pipe(res);
-      },
-    }
-  );
+    // Load the javascript after static html. Will wire up events on load.
+    bootstrapScripts: ["/bundle.js", "/.bundle.css"],
+    onError(err) {
+      didError = true;
+      console.error(err);
+    },
+    onAllReady() {
+      if (streamResponse) {
+        return;
+      }
+      pipe(res);
+    },
+  });
 });
 
 app.use(express.static(path.join(__dirname, "/../dist")));

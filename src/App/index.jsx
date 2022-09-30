@@ -5,23 +5,25 @@ import { DataProvider } from "../Contexts/DataContext";
 import { CoffeeLoader } from "../Coffee/CoffeeLoader";
 import { ReviewListLoader } from "../Coffee/ReviewList/ReviewListLoader";
 import { CartProvider } from "../Contexts/CartContext";
-
+import Html from "../Html";
 const ReviewList = React.lazy(() => import("../Coffee/ReviewList"));
 const Coffee = React.lazy(() => import("../Coffee"));
 
 export const App = () => (
-  <CartProvider>
-    <AppWrapper>
-      <DataProvider data={loadContent()}>
-        <Suspense fallback={<CoffeeLoader />}>
-          <Coffee />
-        </Suspense>
-      </DataProvider>
-      <DataProvider data={loadReviews()}>
-        <Suspense fallback={<ReviewListLoader />}>
-          <ReviewList />
-        </Suspense>
-      </DataProvider>
-    </AppWrapper>
-  </CartProvider>
+  <Html>
+    <CartProvider>
+      <AppWrapper>
+        <DataProvider data={loadContent()}>
+          <Suspense fallback={<CoffeeLoader />}>
+            <Coffee />
+          </Suspense>
+        </DataProvider>
+        <DataProvider data={loadReviews()}>
+          <Suspense fallback={<ReviewListLoader />}>
+            <ReviewList />
+          </Suspense>
+        </DataProvider>
+      </AppWrapper>
+    </CartProvider>
+  </Html>
 );

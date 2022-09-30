@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  gap: 24px;
+}
+
+.product-img {
+  flex: 2;
+}
+
+.product-info {
+  flex: 3;
+}

@@ -1,6 +1,8 @@
 import { LocalMall } from "@mui/icons-material";
-import { Button, Grid, Typography } from "@mui/material";
+import { Button as MuiButton, Grid, Typography } from "@mui/material";
 import React from "react";
+import { Button } from "../UI";
+import { Bag } from "../UI/Icons";
 import { useCart } from "../Contexts/CartContext";
 import { useData } from "../Contexts/DataContext";
 const Coffee = () => {
@@ -35,14 +37,7 @@ const Coffee = () => {
         </Typography>
 
         <div style={{ marginTop: 20 }}>
-          <Button
-            id={React.useId()}
-            disabled={loading}
-            onClick={handleClick}
-            startIcon={<LocalMall />}
-            variant="contained"
-            color="primary"
-          >
+          <Button disabled={loading} onClick={handleClick} startIcon={<Bag />}>
             Add to cart
           </Button>
         </div>

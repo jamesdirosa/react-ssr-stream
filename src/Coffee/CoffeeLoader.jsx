@@ -1,28 +1,26 @@
-import { Grid, Skeleton } from "@mui/material";
 import React from "react";
+import { Skeleton } from "../UI/Skeleton";
+import "./styles.css";
 
 export const CoffeeLoader = () => {
   return (
-    <Grid container spacing={4}>
-      <Grid item xs={5}>
-        <Skeleton variant="rectangular" width={"100%"} height={400} />
-      </Grid>
-      <Grid item xs={7}>
-        <Skeleton variant="text" sx={{ fontSize: "4rem" }} />
-        <Skeleton
-          style={{ paddingTop: 30 }}
-          variant="text"
-          sx={{ fontSize: "1rem" }}
-        />
-        <Skeleton
-          style={{ paddingTop: 30 }}
-          variant="text"
-          sx={{ fontSize: "1rem" }}
-        />
-        <div style={{ marginTop: 20 }}>
-          <Skeleton variant="rectangular" width={100} height={40} />
+    <div className="container">
+      <div className="product-img">
+        <Skeleton block height={400} width={"100%"} />
+      </div>
+      <div className="product-info">
+        <div>
+          <Skeleton text fontSize={"4rem"} />
         </div>
-      </Grid>
-    </Grid>
+        <div style={{ paddingTop: 30 }}>
+          <Skeleton text fontSize={"1rem"} />
+          <Skeleton text fontSize={"1rem"} />
+          <Skeleton text fontSize={"1rem"} />
+        </div>
+        <div style={{ paddingTop: 30 }}>
+          <Skeleton block width={131} height={31} />
+        </div>
+      </div>
+    </div>
   );
 };
