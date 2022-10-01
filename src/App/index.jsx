@@ -9,8 +9,8 @@ import Html from "../Html";
 const ReviewList = React.lazy(() => import("../Coffee/ReviewList"));
 const Coffee = React.lazy(() => import("../Coffee"));
 
-export const App = () => (
-  <Html>
+export const App = ({ assets }) => (
+  <Html assets={assets}>
     <CartProvider>
       <AppWrapper>
         <DataProvider data={loadContent()}>

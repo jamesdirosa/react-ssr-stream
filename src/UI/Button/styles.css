@@ -1,6 +1,6 @@
 button {
   padding: 6px 16px;
-  background-color: #1976d2;
+  background-color: #5c64bf;
   transition: all 0.25s;
   color: white;
   min-width: none;
@@ -18,9 +18,9 @@ button {
 }
 
 button:hover {
-  background-color: #1c89f6;
+  background-color: #414edb;
 }
 
 .disabled {
-  background-color: #6d6d6d;
+  opacity: 0.25;
 }

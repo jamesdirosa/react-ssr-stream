@@ -5,7 +5,7 @@ export const ReviewListLoader = () => {
   return (
     <div style={{ paddingTop: 30 }}>
       {[...Array(3)].map((item, idx) => {
-        return <ReviewLoader key={idx} />;
+        return <ReviewLoader key={React.useId()} />;
       })}
     </div>
   );

@@ -9,7 +9,7 @@ const ReviewList = () => {
       {data.map((review, idx) => {
         return (
           <div
-            key={idx}
+            key={React.useId()}
             style={{
               borderBottom: "1px solid #ccc",
               marginBottom: 10,

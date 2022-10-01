@@ -1,3 +1,22 @@
 body {
   margin: 0;
+  font-family: "Roboto";
+}
+
+h1 {
+  font-family: "Lobster", cursive;
+  font-size: 38px;
+}
+
+.color-primary {
+  color: #65cc9b;
+}
+
+.background-primary {
+  background-color: #5c64bf;
+}
+
+/* layout stuff */
+.margin-no-top {
+  margin-top: 0;
 }
