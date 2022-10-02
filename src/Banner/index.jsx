@@ -4,16 +4,12 @@ import { DataProvider } from "../Contexts/DataContext";
 import { loadProfile } from "../../server/dal/api";
 import "./styles.css";
 import { Skeleton } from "../UI";
+import { CoffeeIcon } from "../UI/Icons";
 
 export const Banner = () => {
   return (
     <div className="banner-wrapper">
-      <span
-        style={{ marginRight: 10 }}
-        className="material-symbols-outlined banner-icon"
-      >
-        local_cafe
-      </span>
+      <CoffeeIcon />
       <div className="banner-title">Bulldog Coffee</div>
       <DataProvider data={loadProfile()}>
         <Suspense

@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "../UI";
-import { Bag } from "../UI/Icons";
+import { BagIcon } from "../UI/Icons";
 import { useCart } from "../Contexts/CartContext";
 import { useData } from "../Contexts/DataContext";
 const Coffee = () => {
@@ -29,7 +29,7 @@ const Coffee = () => {
           <Button
             disabled={loading}
             onClick={handleClick}
-            startIcon={<Bag style={{ marginBottom: 4 }} />}
+            startIcon={<BagIcon style={{ marginBottom: 4 }} />}
           >
             Add to cart
           </Button>

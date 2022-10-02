@@ -21,6 +21,10 @@ h1 {
 }
 
 /* layout stuff */
+.page-wrap {
+  max-width: 800px;
+  margin: 30px auto;
+}
 .margin-no-top {
   margin-top: 0;
 }
