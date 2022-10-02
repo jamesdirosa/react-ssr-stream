@@ -1,4 +1,6 @@
 import React from "react";
+import "./styles";
+
 export const Review = ({
   starCount = 0,
   title = "",
@@ -19,11 +21,11 @@ export const Review = ({
           </span>
         ))}
       </div>
-      <h6>{title}</h6>
-      <p>
+      <div className="review-title">{title}</div>
+      <div className="review-author">
         {author} - {date}
-      </p>
-      <p style={{ paddingTop: 10 }}>{review}</p>
+      </div>
+      <div className="review-body">{review}</div>
     </>
   );
 };

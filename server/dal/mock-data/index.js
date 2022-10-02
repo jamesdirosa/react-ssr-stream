@@ -7,6 +7,13 @@ export const reviews = [
     review: "These pretzels are making me thirsty!",
   },
   {
+    name: "Jean-Luc Picard",
+    title: "Seize this coffee!",
+    starCount: 5,
+    date: "July 13, 2335",
+    review: "Make it so!",
+  },
+  {
     name: "Homer Simpson",
     title: "Mmmmm",
     starCount: 5,
@@ -25,5 +32,5 @@ export const content = {
   description:
     "Our most popular coffee. Notes of beans and whatever else make coffee taste good. Grown in the shire, and harvest by wizards at the peak of bean freshness. Price is for 16oz",
   price: 34.21,
-  img: "https://images.pexels.com/photos/302896/pexels-photo-302896.jpeg",
+  img: "/coffee.jpeg",
 };

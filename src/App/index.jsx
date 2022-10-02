@@ -10,7 +10,7 @@ const ReviewList = React.lazy(() => import("../Coffee/ReviewList"));
 const Coffee = React.lazy(() => import("../Coffee"));
 
 export const App = ({ assets }) => (
-  <Html assets={assets}>
+  <Html title="Bulldog Coffee" assets={assets}>
     <CartProvider>
       <AppWrapper>
         <DataProvider data={loadContent()}>

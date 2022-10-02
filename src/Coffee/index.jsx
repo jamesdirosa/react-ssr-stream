@@ -16,17 +16,21 @@ const Coffee = () => {
   return (
     <div className="container">
       <div className="product-img">
-        <img style={{ width: "100%", height: 400 }} src={data.img} />
+        <img src={data.img} />
       </div>
       <div className="product-info">
         <h1 className="color-primary margin-no-top">{data.title}</h1>
-        <p style={{ paddingTop: 20, lineHeight: "26px" }}>{data.description}</p>
-        <p style={{ paddingTop: 10, lineHeight: "26px" }}>
+        <p>{data.description}</p>
+        <p>
           <strong>Price: </strong> ${data.price}
         </p>
 
         <div style={{ marginTop: 20 }}>
-          <Button disabled={loading} onClick={handleClick} startIcon={<Bag />}>
+          <Button
+            disabled={loading}
+            onClick={handleClick}
+            startIcon={<Bag style={{ marginBottom: 4 }} />}
+          >
             Add to cart
           </Button>
         </div>
