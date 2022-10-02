@@ -1,4 +1,5 @@
 import React from "react";
+import { Star } from "../UI/Icons";
 import "./styles";
 
 export const Review = ({
@@ -12,13 +13,11 @@ export const Review = ({
     <>
       <div>
         {[...Array(starCount)].map((key, idx) => (
-          <span
+          <Star
             key={React.useId()}
             style={{ fontSize: 32 }}
-            className="material-symbols-outlined color-primary"
-          >
-            star
-          </span>
+            className="color-primary"
+          />
         ))}
       </div>
       <div className="review-title">{title}</div>

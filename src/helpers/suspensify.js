@@ -1,3 +1,8 @@
+/**
+ * Used to throw an Error of type Promise until the promise resolves
+ * @param {*} promise
+ * @returns
+ */
 function suspensify(promise) {
   let status = "pending";
   let response;

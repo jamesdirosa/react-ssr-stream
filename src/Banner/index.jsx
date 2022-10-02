@@ -9,7 +9,7 @@ import { CoffeeIcon } from "../UI/Icons";
 export const Banner = () => {
   return (
     <div className="banner-wrapper">
-      <CoffeeIcon />
+      <CoffeeIcon className="banner-icon" />
       <div className="banner-title">Bulldog Coffee</div>
       <DataProvider data={loadProfile()}>
         <Suspense
