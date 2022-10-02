@@ -9,4 +9,8 @@ Just a demo of some react 18 stuff.
 
 ## Why did I have to bootstrap this myself?
 
+- To make it easy to follow
+- To make it easy to troubleshoot
+- Because I had to eliminate sources of issue
+
 https://17.reactjs.org/docs/concurrent-mode-suspense.html#what-if-i-dont-use-relay
