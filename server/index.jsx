@@ -3,9 +3,7 @@ import { renderToPipeableStream } from "react-dom/server";
 import React from "react";
 import { App } from "../src/App";
 import path from "path";
-// TODO: I think the issue is mui injecting stuff or possibly the lack of webpack
-// https://codesandbox.io/s/kind-sammet-j56ro?file=/src/data.js
-// Demo VARS
+
 const streamResponse = true;
 
 const app = express();

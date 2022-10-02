@@ -17,7 +17,7 @@ export function CartProvider({ children }) {
 export function useCart() {
   const ctx = useContext(CartContext);
   const addItem = async () => {
-    await awaitMs(2000);
+    await awaitMs(500);
     ctx.setItemCount((c) => c + 1);
   };
   data = {

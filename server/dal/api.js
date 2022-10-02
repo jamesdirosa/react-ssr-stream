@@ -3,21 +3,21 @@ import { content, profile, reviews } from "./mock-data";
 
 export function loadReviews() {
   const promise = new Promise((res, rej) =>
-    setTimeout(() => res(reviews), 12000)
+    setTimeout(() => res(reviews), 17000)
   );
   return suspensify(promise);
 }
 
 export function loadProfile() {
   const promise = new Promise((res, rej) =>
-    setTimeout(() => res(profile), 3000)
+    setTimeout(() => res(profile), 1000)
   );
   return suspensify(promise);
 }
 
 export function loadContent() {
   const promise = new Promise((res, rej) =>
-    setTimeout(() => res(content), 6000)
+    setTimeout(() => res(content), 2000)
   );
   return suspensify(promise);
 }
