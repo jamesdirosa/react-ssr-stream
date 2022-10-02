@@ -4,7 +4,6 @@ import React from "react";
 import { App } from "../src/App";
 import path from "path";
 // TODO: I think the issue is mui injecting stuff or possibly the lack of webpack
-// TODO: Ditch mui.. I don't really need it
 // https://codesandbox.io/s/kind-sammet-j56ro?file=/src/data.js
 // Demo VARS
 const streamResponse = true;
