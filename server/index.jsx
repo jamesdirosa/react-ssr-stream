@@ -3,11 +3,11 @@ import { renderToPipeableStream } from "react-dom/server";
 import React from "react";
 import { App } from "../src/App";
 import path from "path";
-
-const useSuspense = true;
+import { useSuspense } from "./dal/api";
+import { awaitMs } from "../src/helpers/awaitTimeout";
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 // No webpack, etc, so our bundles are static
 const assets = {
@@ -16,8 +16,13 @@ const assets = {
 };
 
 // root route
-app.get("/", (req, res) => {
+app.get("/", async (req, res) => {
   let didError = false;
+
+  // If we are not using suspense, simulate the slow call at 20s
+  if (!useSuspense) {
+    await awaitMs(20000);
+  }
 
   // https://reactjs.org/docs/react-dom-server.html#rendertopipeablestream
   const { pipe } = renderToPipeableStream(<App assets={assets} />, {
