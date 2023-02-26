@@ -1,4 +1,4 @@
-import { clog } from "./log";
+import { clog } from './log';
 
 /**
  * Used to throw an Error of type Promise until the promise resolves.
@@ -8,16 +8,16 @@ import { clog } from "./log";
  * @returns
  */
 function suspensify(promise, fnName) {
-  let status = "pending";
+  let status = 'pending';
   let response;
 
   const suspender = promise.then(
     (res) => {
-      status = "success";
+      status = 'success';
       response = res;
     },
     (err) => {
-      status = "error";
+      status = 'error';
       response = err;
     }
   );

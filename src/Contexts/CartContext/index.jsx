@@ -1,5 +1,5 @@
-import React, { createContext, useContext } from "react";
-import { awaitMs } from "../../helpers/awaitTimeout";
+import React, { createContext, useContext } from 'react';
+import { awaitMs } from '../../helpers/awaitTimeout';
 export let data;
 
 const CartContext = createContext(null);

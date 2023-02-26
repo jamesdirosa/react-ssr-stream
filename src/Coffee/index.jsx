@@ -1,8 +1,8 @@
-import React from "react";
-import { Button } from "../UI";
-import { BagIcon } from "../UI/Icons";
-import { useCart } from "../Contexts/CartContext";
-import { useData } from "../Contexts/DataContext";
+import React from 'react';
+import { Button } from '../UI';
+import { BagIcon } from '../UI/Icons';
+import { useCart } from '../Contexts/CartContext';
+import { useData } from '../Contexts/DataContext';
 const Coffee = () => {
   const [loading, setLoading] = React.useState(false);
 

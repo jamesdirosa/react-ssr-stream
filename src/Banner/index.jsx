@@ -1,10 +1,10 @@
-import React, { Suspense } from "react";
-const Profile = React.lazy(() => import("../Profile"));
-import { DataProvider } from "../Contexts/DataContext";
-import { loadProfile } from "../../server/dal/api";
-import "./styles.css";
-import { Skeleton } from "../UI";
-import { CoffeeIcon } from "../UI/Icons";
+import React, { Suspense } from 'react';
+const Profile = React.lazy(() => import('../Profile'));
+import { DataProvider } from '../Contexts/DataContext';
+import { loadProfile } from '../../server/dal/api';
+import './styles.css';
+import { Skeleton } from '../UI';
+import { CoffeeIcon } from '../UI/Icons';
 
 export const Banner = () => {
   return (

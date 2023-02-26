@@ -1,13 +1,13 @@
-import React from "react";
-import { Star } from "../UI/Icons";
-import "./styles";
+import React from 'react';
+import { Star } from '../UI/Icons';
+import './styles';
 
 export const Review = ({
   starCount = 0,
-  title = "",
-  date = "",
-  review = "",
-  author = "",
+  title = '',
+  date = '',
+  review = '',
+  author = '',
 }) => {
   return (
     <>

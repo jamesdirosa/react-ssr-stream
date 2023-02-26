@@ -1,11 +1,11 @@
-import React from "react";
-import "./styles.css";
+import React from 'react';
+import './styles.css';
 export const Skeleton = ({ text, circle, block, width, height, fontSize }) => {
   if (circle) {
     return (
       <div
         style={{
-          display: "inline-block",
+          display: 'inline-block',
           width: width ? width : 25,
           height: height ? height : 25,
         }}

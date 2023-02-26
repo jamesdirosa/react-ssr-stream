@@ -1,13 +1,13 @@
 /* defaults */
 body {
   margin: 0;
-  font-family: "Roboto";
+  font-family: 'Roboto';
   font-size: 18px;
   line-height: 36px;
 }
 
 h1 {
-  font-family: "Lobster", cursive;
+  font-family: 'Lobster', cursive;
   font-size: 38px;
 }
 

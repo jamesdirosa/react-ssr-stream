@@ -1,5 +1,5 @@
-import React from "react";
-import "./styles.css";
+import React from 'react';
+import './styles.css';
 export default function Html({ children, assets, title }) {
   return (
     <html lang="en">
@@ -24,7 +24,7 @@ export default function Html({ children, assets, title }) {
           href="https://fonts.googleapis.com/css2?family=Oswald&family=Roboto:wght@100&display=swap"
           rel="stylesheet"
         />
-        <link rel="stylesheet" href={assets["bundle.css"]} />
+        <link rel="stylesheet" href={assets['bundle.css']} />
         <title>{title}</title>
       </head>
       <body>

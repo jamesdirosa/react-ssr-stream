@@ -1,23 +1,23 @@
-import React from "react";
-import "./styles.css";
+import React from 'react';
+import './styles.css';
 export const Button = ({ primary, children, onClick, disabled, startIcon }) => {
   let className = undefined;
   if (primary) {
-    className = "background-primary";
+    className = 'background-primary';
   }
   if (disabled) {
-    className = "disabled";
+    className = 'disabled';
   }
   return (
     <button
       disabled={disabled}
-      className={disabled ? "disabled" : undefined}
+      className={disabled ? 'disabled' : undefined}
       onClick={onClick}
     >
       {startIcon ? (
         <span style={{ marginRight: 4 }}>{startIcon}</span>
       ) : undefined}
-      <span style={{ margin: "auto" }}>{children}</span>
+      <span style={{ margin: 'auto' }}>{children}</span>
     </button>
   );
 };

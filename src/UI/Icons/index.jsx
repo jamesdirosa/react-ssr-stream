@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 
 export const BagIcon = ({ style, className }) => (
   <span
-    style={{ ...style, verticalAlign: "middle" }}
+    style={{ ...style, verticalAlign: 'middle' }}
     className={`material-symbols-outlined ${className}`}
   >
     local_mall
@@ -11,7 +11,7 @@ export const BagIcon = ({ style, className }) => (
 
 export const CoffeeIcon = ({ style, className }) => (
   <span
-    style={{ ...style, verticalAlign: "middle" }}
+    style={{ ...style, verticalAlign: 'middle' }}
     className={`material-symbols-outlined ${className}`}
   >
     local_cafe
@@ -21,7 +21,7 @@ export const CoffeeIcon = ({ style, className }) => (
 export const Star = ({ style, className }) => {
   return (
     <span
-      style={{ ...style, verticalAlign: "middle" }}
+      style={{ ...style, verticalAlign: 'middle' }}
       className={`material-symbols-outlined ${className}`}
     >
       star
