@@ -1,11 +1,12 @@
 # React 18 SSR + Suspense
 
-A very simplified example of React 18 Suspense
+An intentionally, over-simplified, fromn scratch React 18 SSR + Suspense demo
 
 ## Helpful Resources
 
-- [Fantastic suspense explanation](https://www.youtube.com/watch?v=pj5N-Khihgc&list=PLNG_1j3cPCaZZ7etkzWA7JfdmKWT0pMsa&index=3)
-- [And another](https://github.com/reactwg/react-18/discussions/37)
+- [Fantastic suspense explanation given during React Conf 2021](https://www.youtube.com/watch?v=pj5N-Khihgc&list=PLNG_1j3cPCaZZ7etkzWA7JfdmKWT0pMsa&index=3)
+- [A deeper dive](https://github.com/reactwg/react-18/discussions/37)
+- [NextJS' very visual explanation of suspense](https://beta.nextjs.org/docs/data-fetching/streaming-and-suspense)
 
 ## Get it running
 
