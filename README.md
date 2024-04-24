@@ -1,6 +1,6 @@
 # React 18 SSR + Suspense
 
-An intentionally, over-simplified, fromn scratch React 18 SSR + Suspense demo
+An intentionally, over-simplified, from scratch React 18 SSR + Suspense demo
 
 ## Helpful Resources
 
